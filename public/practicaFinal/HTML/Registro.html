@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../CSS/formularioStyle.css">
+    <script src="./../JS/Registro.js"></script>
+    <title>Registro</title>
+</head>
+<body>
+    <header><h1>Registro de nuevo Usuario</h1></header>
+    <form id="form1">
+        <label for="nombre">Nombre: </label>
+        <br/>
+        <input id="nombre" type="text" name="Nombre" required/>
+        <br/>
+        <label for="psw">Contraseña:</label>
+        <br/>
+        <input id="psw" type="password" name="contraseña" required/>
+        <br/>
+        <input id="continuar" type="button" value="Continuar" onclick="mostrarSiguienteFormulario()"/>
+        <br/>
+    </form>
+    <form id="form2" style="display: none;">
+        <p><b>Por favor, introduce los datos restantes</b></p>
+        <br/>
+        <label for="email">Email: </label>
+        <br/>
+        <input id="email" type="text" name="Correo" required/>
+        <br/>
+        <br/>
+        <label for="fechaNac">Fecha de nacimiento:</label>
+        <br/>
+        <input
+          id="fechaNac"
+          type="date"
+          name="fecha_Nacimiento"
+          required
+        />
+        <br/>
+        <br/>
+        <label for="nombreReal">Nombre y apellidos: </label>
+        <br/>
+        <input id="nombreReal" type="nombreReal" required/>
+        <br/>
+        <input id="Registro" type="button" value="Registrarse" onclick="crearUsuario()"/>
+        <br/>
+    </form>
+    </body>
+</html>

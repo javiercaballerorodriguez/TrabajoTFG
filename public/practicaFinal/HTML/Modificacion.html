@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../CSS/formularioStyle.css">
+    <script src="./../JS/Modificacion.js"> </script>
+    <title>PaginaDeModificacion</title>
+</head>
+<body onload="cargarModificacion()">
+  <header class="container mt-3"><h1>Modifica los datos que desees</h1></header>
+  <form class="container mt-3" id="form" action="Login.html">
+      <div class="form-groupNombre">
+          <label for="nombre">Nombre:</label>
+          <input id="nombre" type="text" class="form-control" name="Nombre" required/>
+      </div>
+      <div class="form-groupFechaNac">
+          <label for="fechaNac">Fecha de nacimiento:</label>
+          <input id="fechaNac" type="date" class="form-control" min="1900-01-01" max="2020-01-01" name="fechaNac" required/>
+      </div>
+      <div class="form-groupFechaDef">
+          <label for="fechaDef">Fecha de defunción:</label>
+          <input id="fechaDef" type="date" class="form-control" min="1900-01-01" max="2020-01-01" name="fechaDef"/>
+      </div>
+      <div class="form-groupImg">
+          <label for="img">Imagen:</label>
+          <input id="img" type="url" class="form-control"/>
+      </div>
+      <div class="form-groupWiki">
+          <label for="wiki">Wiki:</label>
+          <input id="wiki" type="url" class="form-control"/>
+      </div>
+      <button id="modificacion" type="submit" class="btn btn-primary" onclick="modificar()">Modificar Valores</button>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>

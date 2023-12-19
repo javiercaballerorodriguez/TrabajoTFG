@@ -1,0 +1,90 @@
+header{
+    width: 80%;
+    margin-left: 10%;
+    text-align:center;
+}
+
+form{
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+
+form label{
+	font-weight:bold;
+	margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="url"],
+form input[type="password"],
+form input[type="date"], 
+#rol,
+#status
+{
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+
+}
+
+form input[type="submit"],[type="button"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	color:#fff;
+	background-color:blue;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+#value {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-groupContraseña {
+	position: relative;
+}
+
+.toggle-icon {
+	position: absolute;
+	bottom: 79.5%;
+	left: 77%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+
+/*form input[type="url"]{
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin-top:8px 0;
+}
+
+form input[type="password"]{
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+}
+
+form input[type="date"], #rol, #status{
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	margin-top: 8px;
+}
+*/

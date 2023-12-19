@@ -1,0 +1,73 @@
+body{
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+main {
+    margin: 30px;
+  }
+
+h1{
+    text-align: left;
+    height: 60px;
+    font-weight: bold;
+}
+
+#tituloPerfil{
+    text-align: center;
+    height: 60px;
+    font-weight: bold;
+}
+
+h2, #campoContraseña{
+    text-align: center;
+    height: 60px;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+}
+
+iframe{
+    width:100%;
+    height:500;
+    float: right;
+}
+
+li{
+    margin-left: 30px;
+}
+
+a{
+    margin-left: 70%;
+}
+
+
+
+#botonVolver{
+    margin-left: 38%;
+    margin-right: 10%;
+    padding:8px 16px;
+	border:1px solid #000;
+	border-radius:5px;
+	color:#fff;
+	background-color:gray;
+}
+
+
+#h2Persona, #h2Departamento, #h2Producto{
+   text-align: left;
+}
+
+
+#botonModificar{
+	padding:8px 16px;
+	border:1px solid #000;
+	border-radius:5px;
+	color:#fff;
+	background-color:blue;
+} 
+
