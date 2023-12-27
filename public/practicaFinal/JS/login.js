@@ -337,7 +337,7 @@ function createItem()
                     "deathDate": document.getElementById("fechaDef").value,
                     "wikiUrl": document.getElementById("wiki").value,
                     "imageUrl": document.getElementById("img").value,
-                //    "value": document.getElementById("value").value
+                    "values": document.getElementById("value").value
                 }
                 xhr.onload = function(){
                     if(xhr.status===201)
@@ -547,7 +547,7 @@ function introducirAtributosAlFormulario()
 {
     let elemento = sessionStorage.getItem("idFil");
     let inputCrear = document.getElementById("crear");
-    /*if(elemento === 'filasProductoLogin'){
+    if(elemento === 'filasProductoLogin'){
          // Crear el campo de value
         let form= document.getElementById("form");
         var valueLabel = document.createElement("label");
@@ -561,7 +561,6 @@ function introducirAtributosAlFormulario()
         form.insertBefore(inputValue, inputCrear);
       //  form.insertBefore(espacio, inputValue);
     }
-    */
     if(elemento === 'filasPersonaLogin'){
     var form = document.getElementById("form");
     const brLast = document.createElement("br");  // Salto de línea antes del botón

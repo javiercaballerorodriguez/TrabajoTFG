@@ -30,7 +30,7 @@ $ElementType = strtolower($argv[1]);
 $name = $argv[2];
 
 try {
-    /** @var ElementFactory $factoryClass */
+    /** @var ProductFactory $factoryClass */
     $factoryClass = match ($ElementType) {
         'product' => ProductFactory::class,
         'entity' => EntityFactory::class,

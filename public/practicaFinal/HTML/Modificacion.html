@@ -15,11 +15,11 @@
   <form class="container mt-3" id="form" action="Login.html">
       <div class="form-groupNombre">
           <label for="nombre">Nombre:</label>
-          <input id="nombre" type="text" class="form-control" name="Nombre" required/>
+          <input id="nombre" type="text" class="form-control" name="Nombre"/>
       </div>
       <div class="form-groupFechaNac">
           <label for="fechaNac">Fecha de nacimiento:</label>
-          <input id="fechaNac" type="date" class="form-control" min="1900-01-01" max="2020-01-01" name="fechaNac" required/>
+          <input id="fechaNac" type="date" class="form-control" min="1900-01-01" max="2020-01-01" name="fechaNac"/>
       </div>
       <div class="form-groupFechaDef">
           <label for="fechaDef">Fecha de defunción:</label>
@@ -33,6 +33,10 @@
           <label for="wiki">Wiki:</label>
           <input id="wiki" type="url" class="form-control"/>
       </div>
+      <div class="form-groupValue">
+        <label for="value">Valor:</label>
+        <input id="value" type="Integer" class="form-control"/>
+    </div>
       <button id="modificacion" type="submit" class="btn btn-primary" onclick="modificar()">Modificar Valores</button>
   </form>
 

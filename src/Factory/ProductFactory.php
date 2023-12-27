@@ -12,7 +12,7 @@ namespace TDW\ACiencia\Factory;
 use DateTime;
 use TDW\ACiencia\Entity\Product;
 
-class ProductFactory extends ElementFactory
+class ProductFactory
 {
     /**
      * Product builder.
@@ -23,8 +23,10 @@ class ProductFactory extends ElementFactory
         ?DateTime $deathDate = null,
         ?string $imageUrl = null,
         ?string $wikiUrl = null,
-        ?int $value = null
+        ?string $values = null  // Nuevo atributo $value
     ): Product {
-        return new Product($name, $birthDate, $deathDate, $imageUrl, $wikiUrl, $value);
+        return new Product($name, $birthDate, $deathDate, $imageUrl, $wikiUrl, $values);
     }
 }
+
+

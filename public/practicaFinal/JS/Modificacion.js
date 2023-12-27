@@ -427,9 +427,9 @@ function updateProducto(producto)
             if(document.getElementById("img").value.length !=0){
                 producto.product.imageUrl= document.getElementById("img").value;
             } 
-            /*if(document.getElementById("value").value.length !=0){
-                producto.product.value= document.getElementById("value").value;
-            }*/
+            if(document.getElementById("value").value.length !=0){
+                producto.product.values= document.getElementById("value").value;
+            }
             xhr2.onload = function(){
                 if(xhr2.status===209)
                 { 
@@ -473,7 +473,6 @@ function updateProducto(producto)
                         }
                         xhr3.send(null);
                     }
-                    
                     window.alert("Producto modificado correctamente");
                 }
             }

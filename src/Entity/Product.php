@@ -19,12 +19,12 @@ use JetBrains\PhpStorm\ArrayShape;
 #[ORM\UniqueConstraint(name: "Product_name_uindex", columns: [ "name" ])]
 class Product extends Element
 {
-   /* #[ORM\Column(
-        name: "value",
+    #[ORM\Column(
+        name: "values",
         type: "integer",
         nullable: true
     )]
-    protected int | null $value = null; */
+    protected int | null $values = null;
 
     #[ORM\ManyToMany(targetEntity: Person::class, inversedBy: "products")]
     #[ORM\JoinTable(name: "person_contributes_product")]
@@ -45,6 +45,7 @@ class Product extends Element
      * @param DateTime|null $deathDate
      * @param string|null $imageUrl
      * @param string|null $wikiUrl
+     * @param int|null $values
      */
     public function __construct(
         string $name,
@@ -52,27 +53,35 @@ class Product extends Element
         ?DateTime $deathDate = null,
         ?string $imageUrl = null,
         ?string $wikiUrl = null,
-   //     ?int $value = null
+        ?int $values = null
     ) {
         parent::__construct($name, $birthDate, $deathDate, $imageUrl, $wikiUrl);
-   //     $this->value = $value;
+        $this->values = $values;
         $this->persons = new ArrayCollection();
         $this->entities = new ArrayCollection();
     }
 
 
 
-    /*final public function getValue(): ?int
+    /**
+    * @return int|null $values
+    */
+    final public function getValue(): ?int
     {
-        return $this->value;
+        return $this->values;
     }
 
 
-    final public function setValue(?int $value): void
+    /**
+    * @param int|null $values
+    */
+    final public function setValue(?int $values): void
     {
-        $this->value = $value;
+        $this->values = $values;
     }
-*/
+
+
+
 
     // Entities
 
@@ -159,10 +168,9 @@ class Product extends Element
     public function __toString(): string
     {
         return sprintf(
-        //    'value="%s",
-             '%s persons=%s, entities=%s)]',
+            '%s values="%s", persons=%s, entities=%s)]',
             parent::__toString(),
-       //     $this->getValue(),
+            $this->getValue(),
             $this->getCodesTxt($this->getPersons()),
             $this->getCodesTxt($this->getEntities())
         );
@@ -172,10 +180,9 @@ class Product extends Element
     public function jsonSerialize(): mixed
     {
         $data = parent::jsonSerialize();
-      //  $data['value'] = $this->getValue();
+        $data['values'] = $this->getValue();
         $data['persons'] = $this->getPersons() ? $this->getCodes($this->getPersons()) : null;
         $data['entities'] = $this->getEntities() ? $this->getCodes($this->getEntities()) : null;
-
         return ['product' => $data];
     }
 }

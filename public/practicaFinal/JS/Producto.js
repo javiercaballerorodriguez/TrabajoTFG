@@ -65,7 +65,7 @@ function cargarProducto()
     const h32 = document.createElement("h3");
     h32.innerHTML = "Fecha de finalización: "+ producto.deathDate;
     const h33 = document.createElement("h3");
-    h33.innerHTML="Valor del producto: "+ producto.value;
+    h33.innerHTML="Valor del producto: "+ producto.values;
     const iframe = document.createElement("iframe");
     iframe.src=producto.wikiUrl;
     const img = document.createElement("img");
